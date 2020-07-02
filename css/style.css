@@ -43,12 +43,13 @@ header{
  height: 90px;
  padding: 0 141px;
  background-color: var(--color66);
- border: 2px solid var(--color33);
+ border-bottom: 2px solid var(--color33);
 }
 .header__logo{
  display: flex;
  justify-content: flex-start;
  align-items: center;
+
 }
 .header__logo > p{
  font-size: 36px;
@@ -62,7 +63,7 @@ header{
  color: var(--color00);
 }
 header nav a{
- padding: 40px 40px;
+ padding: 30px 40px;
  text-decoration: none;
  color: var(--colorfff);
  font-weight: bold;
@@ -150,8 +151,6 @@ header nav a:hover{
  top: -22px;
 }
 .section__header{
- height: 47px;
- width: 215px;
  text-align: center;
  margin: 91px auto 31px auto;
 }
@@ -161,6 +160,7 @@ header nav a:hover{
  color: var(--color000);
  text-transform: uppercase;
 }
+/*todo :: wyposrodkowac flexem? skąd pobiorą wysokość*/
 .section__header > h2::before,
 .section__header > h2::after{
  content: "";
@@ -168,32 +168,197 @@ header nav a:hover{
  height: 3px;
  background-color: var(--color00);
  display: inline-block;
- margin: 10px 0;
+ margin: 10px 5px;
 }
-.blog__content{
+.section__content{
  display: flex;
  justify-content: center;
  align-items: center;
 }
-.blog__box{
+.box{
  padding: 8px;
  color: var(--color6a);
 
 }
-.blog__box > h2{
+.box > h2{
  font-size: 19px;
  text-transform: uppercase;
  margin: 26px 0 15px 0;
 }
-.blog__box > a{
+.box > p{
+ font-size: 14px;
+}
+.btn,
+.box > a{
  display: inline-block;
  font-weight: 800;
+ font-size: 14px;
  text-transform: uppercase;
  color: var(--colorfff);
  background-color: var(--color00);
  padding: 10px 29px;
- margin-top: 15px;
+ /*todo :: czy można sobie tak przycislami odpychac elementy czy lepiej divem*/
+ margin: 15px 0 110px 0;
  border-radius: 40px;
  box-shadow: 0 3px 6px var(--color4d);
  text-decoration: none;
+}
+/*service*/
+.service{
+ background-color: var(--color2c);
+}
+.service > .section__header{
+ padding-top: 60px;
+ margin: 0 0 75px 0;
+}
+.service > .section__header > h2 {
+ color: var(--colorfff);
+}
+.service__box{
+ text-align: center;
+}
+.service__box > img{
+ padding: 0 30px;
+}
+.service__box > h2{
+ color: var(--colorfff);
+}
+.service__box > p {
+ color: var(--colorb2);
+}
+/*content*/
+.contact > .section__content{
+ display: flex;
+ justify-content: space-between;
+ padding: 0 100px;
+}
+.section__content > div {
+ padding: 10px;
+ align-self: flex-start;
+}
+.contact > .section__content > .service-img {
+ width: 50%;
+}
+.contact > .section__content > .form {
+ width: 50%;
+ display: flex;
+ flex-direction: column;
+}
+form{
+ display: flex;
+ flex-direction: column;
+ align-items: stretch;
+}
+form > input,
+form > textarea
+{
+ padding: 8px 12px;
+ margin: 5px;
+ color: var(--colorb2);
+ font-size: 16px;
+ font-family: 'Nunito Sans', sans-serif;
+ border-radius: 8px;
+ outline: none;
+ border: 1px solid var(--colord1);
+}
+form > textarea{
+ resize: none;
+}
+form > input:focus,
+form > textarea:focus
+{
+ border: 1px solid var(--color00);
+ box-shadow: 0 1px 6px var(--color4d);
+}
+form p{
+ color: var(--colorb2);
+ font-size: 10px;
+ padding: 0 5px 0 32px;
+ margin-top: -15px;
+}
+form input[type="checkbox"]{
+ opacity: 1;
+ position: relative;
+ top: 0;
+ width: 0;
+ height: 0;
+}
+/*todo :: checkbox
+
+   input
+    opacity 0
+    width 0 i heghtt 0
+
+   html
+   label
+    input
+     span
+     p /p
+    /lable
+
+   zaznaczenia
+   label input +span
+   lablel input::after + span
+
+
+   */
+form span::after{
+ content: "";
+ opacity: 1;
+ width: 1em;
+ height: 1em;
+ border: 1px solid var(--colord1);
+ display: inline-block;
+ position: relative;
+ top: 0;
+ left: 5px;
+ border-radius: 8px;
+}
+form input[type="checkbox"]:checked + span::after{
+ background-image: url("../images/Icon Check.svg");
+ background-position: center;
+ background-repeat: no-repeat;
+}
+.form > a {
+ color: var(--color00);
+ background-color: var(--colorfff);
+ border: 1px solid var(--color00);
+ align-self: flex-end;
+margin-bottom: 65px;
+}
+footer{
+ height: 232px;
+ background-color: var(--color2c);
+}
+.footer > .header__logo{
+ padding-top: 40px;
+}
+.footer__box{
+ display: flex;
+ position: relative;
+}
+.footer__links{
+ display: flex;
+ flex-direction: column;
+ margin-top: 22px;
+ margin-right: 140px;
+ text-transform: uppercase;
+ font-size: 14px;
+}
+.footer__links a {
+ color: var(--colorfff);
+ padding: 3px 0;
+ text-decoration: none;
+ font-weight: 800;
+}
+.footer__links a:hover{
+ color: var(--color00);
+}
+.footer--copy{
+ font-size: 12px;
+ color: var(--colord1);
+ align-self: flex-end;
+ position: absolute;
+ bottom: 0;
+ right: 0;
 }
