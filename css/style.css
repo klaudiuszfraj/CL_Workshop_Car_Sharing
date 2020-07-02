@@ -1,0 +1,199 @@
+/*font-family: 'Nunito Sans', sans-serif;*/
+/*font-family: 'Open Sans', sans-serif;*/
+:root{
+ --colorfff: #FFFFFF;
+ --color000: #000000;
+ --color66: #00000066;
+ --color33: #FFFFFF33;
+ --color00: #FF0000;
+ --color40: #00000040;
+ --color4d: #FF00004D;
+ --color29: #FFFFFF29;
+ --color6a: #6A6A6A;
+ --color2c: #28272C;
+ --colorb2: #B2B2B2;
+ --colord1: #D1D1D1;
+}
+
+*{
+ box-sizing: border-box;
+}
+img, video, canvas{
+ max-width: 100%;
+ max-height: 100%;
+}
+body{
+ font-family: 'Nunito Sans', sans-serif;
+}
+.container{
+ max-width: 1088px;
+ width: 100%;
+ margin: 0 auto;
+}
+header{
+ position: absolute;
+ top: 0;
+ width: 100%;
+ z-index: 1;
+}
+.header{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ height: 90px;
+ padding: 0 141px;
+ background-color: var(--color66);
+ border: 2px solid var(--color33);
+}
+.header__logo{
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+}
+.header__logo > p{
+ font-size: 36px;
+ font-family: 'Nunito Sans', sans-serif;
+ color: var(--colorfff);
+ font-weight: bold;
+ text-transform: uppercase;
+}
+.header__logo > p > span{
+ font-weight: bolder;
+ color: var(--color00);
+}
+header nav a{
+ padding: 40px 40px;
+ text-decoration: none;
+ color: var(--colorfff);
+ font-weight: bold;
+ text-transform: uppercase;
+ font-family: 'Nunito Sans', sans-serif;
+}
+/*todo :: dlaczego hover wychodzi poza obręb headr*/
+header nav a:hover{
+ background-color: var(--color33);
+}
+/*bannner*/
+.banner{
+ height: 807px;
+ background-image: url("../images/Image.jpg");
+ background-position: center;
+ background-size: cover;
+ top: 0;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: relative;
+}
+.banner::before{
+ content: "";
+ background-color: black;
+ opacity: 0.5;
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ top: 0;
+}
+.banner__content{
+ max-width: 917px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ z-index: 1;
+}
+.banner__content > h1{
+ color: var(--colorfff);
+ font-size: 90px;
+ text-shadow: 0 3px 6px var(--color40);
+ font-weight: 900;
+}
+.banner__content > p {
+ color: var(--colorfff);
+ padding: 10px;
+}
+.banner__content > div{
+ display: flex;
+ justify-content: center;
+ margin-top: 50px;
+}
+.banner__content > div > a{
+ font-size: 16px;
+ padding: 23px 51px;
+ background-color: var(--color00);
+ color: var(--colorfff);
+ border-radius: 40px;
+ text-decoration: none;
+ text-transform: uppercase;
+ margin: 0 13px;
+ font-weight: 700;
+}
+.banner__content > div > a:last-child{
+ background-color: var(--colorfff);
+ color: var(--color00);
+}
+/*blog*/
+.blog{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
+.blog > img{
+ height: 55px;
+ width: 55px;
+ background-color: var(--color00);
+ border-radius: 50%;
+ padding: 13px;
+ position: relative;
+ top: -22px;
+}
+.section__header{
+ height: 47px;
+ width: 215px;
+ text-align: center;
+ margin: 91px auto 31px auto;
+}
+.section__header > h2{
+ font-size: 35px;
+ font-weight: 800;
+ color: var(--color000);
+ text-transform: uppercase;
+}
+.section__header > h2::before,
+.section__header > h2::after{
+ content: "";
+ width: 50px;
+ height: 3px;
+ background-color: var(--color00);
+ display: inline-block;
+ margin: 10px 0;
+}
+.blog__content{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.blog__box{
+ padding: 8px;
+ color: var(--color6a);
+
+}
+.blog__box > h2{
+ font-size: 19px;
+ text-transform: uppercase;
+ margin: 26px 0 15px 0;
+}
+.blog__box > a{
+ display: inline-block;
+ font-weight: 800;
+ text-transform: uppercase;
+ color: var(--colorfff);
+ background-color: var(--color00);
+ padding: 10px 29px;
+ margin-top: 15px;
+ border-radius: 40px;
+ box-shadow: 0 3px 6px var(--color4d);
+ text-decoration: none;
+}
